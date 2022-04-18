@@ -63,8 +63,7 @@ namespace PalinkBlazor.Markdown
         {
             if (firstRender)
             {
-                await JsInterop.RenderEditor(
-                    Theme == MarkdownTheme.DarkTheme ? "dark" : "default", Height, Width);
+                await JsInterop.RenderEditor(Theme, Height, Width);
 
                 _objRef = DotNetObjectReference.Create(this);
                 await JsInterop.SetDotnetObject(_objRef);

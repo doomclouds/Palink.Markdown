@@ -31,7 +31,7 @@ public class JsInterop : IAsyncDisposable
         return await module.InvokeAsync<string>("getHtml");
     }
 
-    public async ValueTask RenderEditor(string? theme, int height, double width)
+    public async ValueTask RenderEditor(MarkdownTheme theme, int height, double width)
     {
         if (width is > 1 or < 0)
         {
@@ -40,8 +40,8 @@ public class JsInterop : IAsyncDisposable
 
         var module = await _moduleTask.Value;
         await module.InvokeVoidAsync("renderEditor",
-            theme == "dark" ? MarkdownTheme.DarkTheme
-                : MarkdownTheme.LightTheme, height, $"{(int)(width * 100)}%");
+            theme == MarkdownTheme.DarkTheme ? "dark"
+                : "default", height, $"{(int)(width * 100)}%");
     }
 
     public async ValueTask SetDotnetObject(DotNetObjectReference<MarkdownEditor> objRef)
