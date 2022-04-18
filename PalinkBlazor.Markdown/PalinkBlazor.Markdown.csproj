@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <PackageReleaseNotes>Blazor Markdown Editor And Markdown Html Render</PackageReleaseNotes>
+    <PackageReleaseNotes>优化部分功能、增加完整说明书</PackageReleaseNotes>
     <AssemblyVersion>0.0.0.1</AssemblyVersion>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <FileVersion>0.0.0.1</FileVersion>
@@ -16,11 +16,12 @@
 </Description>
     <Company>palink</Company>
     <Authors>palink</Authors>
-    <Version>0.0.1</Version>
+    <Version>0.0.3</Version>
     <PackageId>PalinkBlazor.Markdown</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Product>PalinkBlazor.Markdown</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/doomclouds/Palink.Markdown.git</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
